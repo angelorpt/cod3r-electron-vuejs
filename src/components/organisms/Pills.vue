@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <span class="pills" v-for="(pill, index) in groupedWords" :key="index">
-      <Pill :name="pill.name" :amount="pill.amount" />
+  <div class="pills">
+    <span v-for="(pill, index) in groupedWords" :key="index">
+      <Pill class="pill" :name="pill.name" :amount="pill.amount" />
     </span>
   </div>
 </template>
@@ -16,18 +16,20 @@ export default {
   data() {
     return {
       groupedWords: [
-        {
-          name: "Hi",
-          amount: "246",
-        },
-        {
-          name: "You",
-          amount: "321",
-        },
-        {
-          name: "He",
-          amount: "245",
-        },
+        { name: "Hi", amount: "246" },
+        { name: "You", amount: "321" },
+        { name: "He", amount: "245" },
+        { name: "She", amount: "123" },
+        { name: "It", amount: "567" },
+        { name: "It", amount: "567" },
+        { name: "Içlkjfklçsdt", amount: "567" },
+        { name: "It", amount: "567" },
+        { name: "It", amount: "567" },
+        { name: "It", amount: "567" },
+        { name: "rewrew", amount: "567" },
+        { name: "It", amount: "567" },
+        { name: "It", amount: "567" },
+        { name: "It", amount: "567" },
       ],
     };
   },
@@ -37,9 +39,12 @@ export default {
 <style lang="scss" scoped>
 .pills {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  .pill {
+    margin: 0.1rem 0.6rem;
+  }
 }
 </style>

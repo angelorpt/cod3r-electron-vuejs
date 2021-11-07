@@ -1,9 +1,7 @@
 <template>
-  <div>
-    <Badge :amount="amount">
-      <Chip :name="name" />
-    </Badge>
-  </div>
+  <Badge :amount="amount">
+    <Chip :name="name" />
+  </Badge>
 </template>
 
 <script>
