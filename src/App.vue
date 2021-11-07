@@ -1,21 +1,13 @@
 <template>
-  <v-app>
-    <AppBar>
-      <Title title="Most Used Words" />
-    </AppBar>
-
-    <v-main> main </v-main>
-  </v-app>
+  <HomePage />
 </template>
 
 <script>
-import { Title, AppBar } from "./components/atoms";
+import { HomePage } from "./components/pages";
 
 export default {
   name: "App",
-
-  components: { AppBar, Title },
-
+  components: { HomePage },
   data: () => ({
     //
   }),
