@@ -4,7 +4,7 @@
       <Title title="Most Used Words" />
     </AppBar>
 
-    <v-main>
+    <v-main class="home-template">
       <slot></slot>
     </v-main>
   </v-app>
@@ -22,4 +22,12 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+.home-template {
+  height: 100vh;
+  margin: 0 1rem;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+</style>

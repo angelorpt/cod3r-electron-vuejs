@@ -1,5 +1,5 @@
 <template>
-  <HomeTemplate class="home-template">
+  <HomeTemplate>
     <Pills />
   </HomeTemplate>
 </template>
@@ -17,9 +17,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.home-template {
-  display: flex;
-  flex-direction: row;
-}
-</style>
+<style lang="scss" scoped></style>

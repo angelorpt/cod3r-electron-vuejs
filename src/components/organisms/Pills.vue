@@ -29,6 +29,13 @@ export default {
         { name: "rewrew", amount: "567" },
         { name: "It", amount: "567" },
         { name: "It", amount: "567" },
+        { name: "Içlkjfklçsdt", amount: "567" },
+        { name: "It", amount: "567" },
+        { name: "It", amount: "567" },
+        { name: "It", amount: "567" },
+        { name: "rewrew", amount: "567" },
+        { name: "It", amount: "567" },
+        { name: "It", amount: "567" },
         { name: "It", amount: "567" },
       ],
     };
@@ -44,7 +51,7 @@ export default {
   align-items: center;
   justify-content: space-around;
   .pill {
-    margin: 0.1rem 0.6rem;
+    margin: 0.3rem 1rem;
   }
 }
 </style>
