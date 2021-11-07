@@ -1,13 +1,19 @@
 <template>
   <div>
-    <span>{{ name }}</span>
-    <span>{{ amount }}</span>
+    <Badge :amount="amount">
+      <Chip :name="name" />
+    </Badge>
   </div>
 </template>
 
 <script>
+import { Chip, Badge } from "../atoms";
 export default {
   name: "Pill",
+  components: {
+    Chip,
+    Badge,
+  },
   props: {
     name: {
       type: String,

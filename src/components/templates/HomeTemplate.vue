@@ -4,10 +4,9 @@
       <Title title="Most Used Words" />
     </AppBar>
 
-    <v-container fluid>
+    <v-main>
       <slot></slot>
-    </v-container>
-    <!-- <v-main> main </v-main> -->
+    </v-main>
   </v-app>
 </template>
 

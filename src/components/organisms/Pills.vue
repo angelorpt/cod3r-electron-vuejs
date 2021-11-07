@@ -1,11 +1,8 @@
 <template>
   <div>
-    <Pill
-      :name="pill.name"
-      :amount="pill.amount"
-      v-for="(pill, index) in groupedWords"
-      :key="index"
-    />
+    <span class="pills" v-for="(pill, index) in groupedWords" :key="index">
+      <Pill :name="pill.name" :amount="pill.amount" />
+    </span>
   </div>
 </template>
 
@@ -37,4 +34,12 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.pills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+</style>
