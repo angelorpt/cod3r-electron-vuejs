@@ -1,6 +1,6 @@
 <template>
   <Form>
-    <InputFile label="Selecione as Legendas" @click="teste" />
+    <InputFile label="Selecione as Legendas" @click="proccessSubtitle" />
   </Form>
 </template>
 
@@ -8,7 +8,6 @@
 import { Form } from "../bosons";
 import { InputFile } from "../atoms";
 import { ipcRenderer } from "electron";
-// const { ipcRenderer } = require("electron");
 
 export default {
   name: "FormFiles",
@@ -17,11 +16,12 @@ export default {
     InputFile,
   },
   methods: {
-    teste(files) {
+    proccessSubtitle(files) {
       console.log("files", files);
-      ipcRenderer.send("blabla", "ping");
-      ipcRenderer.on("pong", (event, arg) => {
-        console.log("pong", arg);
+      ipcRenderer.send("process-subtitles", "ping");
+      ipcRenderer.on("process-subtitles", (event, arg) => {
+        console.log("pong");
+        this.$emit("processed", arg);
       });
     },
   },

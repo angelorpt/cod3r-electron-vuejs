@@ -1,7 +1,10 @@
 <template>
   <HomeTemplate class="home-template">
-    <FormFiles class="form-files" />
-    <Pills />
+    <FormFiles
+      class="form-files"
+      @processed="(data) => (groupedWords = data)"
+    />
+    <Pills :groupedWords="groupedWords" />
   </HomeTemplate>
 </template>
 
@@ -15,6 +18,11 @@ export default {
     HomeTemplate,
     Pills,
     FormFiles,
+  },
+  data: () => {
+    return {
+      groupedWords: [],
+    };
   },
 };
 </script>
