@@ -11,7 +11,7 @@ import { Pill } from "../molecules";
 export default {
   name: "Pills",
   props: {
-    groupedWords: {
+    edWords: {
       type: Array,
       required: true,
     },
