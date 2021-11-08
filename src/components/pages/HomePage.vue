@@ -21,7 +21,7 @@ export default {
 
 <style lang="scss" scoped>
 .form-files {
-  margin: 1rem;
+  margin-top: 2rem;
   border-bottom: 1px dotted #ccc;
 }
 .home-template {

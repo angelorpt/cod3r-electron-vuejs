@@ -15,8 +15,8 @@ export default {
     InputFile,
   },
   methods: {
-    teste() {
-      alert("teste");
+    teste(files) {
+      console.log("files", files);
     },
   },
 };
