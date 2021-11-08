@@ -1,20 +1,31 @@
 <template>
-  <HomeTemplate>
+  <HomeTemplate class="home-template">
+    <FormFiles class="form-files" />
     <Pills />
   </HomeTemplate>
 </template>
 
 <script>
 import { HomeTemplate } from "../templates";
-import { Pills } from "../organisms";
+import { Pills, FormFiles } from "../organisms";
 
 export default {
   name: "HomePage",
   components: {
     HomeTemplate,
     Pills,
+    FormFiles,
   },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.form-files {
+  margin: 1rem;
+  border-bottom: 1px dotted #ccc;
+}
+.home-template {
+  display: flex;
+  flex-direction: column;
+}
+</style>
