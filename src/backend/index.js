@@ -1,28 +1,17 @@
 import { ipcMain } from "electron";
+import getRowsFromPaths from "./pathsToRows";
 
-ipcMain.on("process-subtitles", (event, paths) => {
-  console.log(paths);
+ipcMain.on("process-subtitles", async (event, paths) => {
+  console.log("paths", paths);
+  try {
+    const rows = await getRowsFromPaths(paths);
+    console.log("rows", rows);
+  } catch (error) {
+    console.log(error);
+  }
+
   event.reply("process-subtitles", [
     { name: "Hi", amount: 246 },
     { name: "You", amount: 321 },
-    { name: "He", amount: 245 },
-    { name: "She", amount: 123 },
-    { name: "It", amount: 567 },
-    { name: "It", amount: 567 },
-    { name: "Içlkjfklçsdt", amount: 567 },
-    { name: "It", amount: 567 },
-    { name: "It", amount: 567 },
-    { name: "It", amount: 567 },
-    { name: "rewrew", amount: 567 },
-    { name: "It", amount: 567 },
-    { name: "It", amount: 567 },
-    { name: "Içlkjfklçsdt", amount: 567 },
-    { name: "It", amount: 567 },
-    { name: "It", amount: 567 },
-    { name: "It", amount: 567 },
-    { name: "rewrew", amount: 567 },
-    { name: "It", amount: 567 },
-    { name: "It", amount: 567 },
-    { name: "It", amount: 567 },
   ]);
 });
