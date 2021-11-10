@@ -1,19 +1,16 @@
 import { ipcMain } from "electron";
 import getRowsFromPaths from "./pathsToRows";
 import prepareData from "./prepareData";
+import groupWords from "./groupWords";
 
 ipcMain.on("process-subtitles", async (event, paths) => {
-  console.log("paths", paths);
   try {
     const rows = await getRowsFromPaths(paths);
     const words = await prepareData(rows);
-    console.log("words", words);
+    const wordsList = await groupWords(words);
+
+    event.reply("process-subtitles", wordsList);
   } catch (error) {
     console.log(error);
   }
-
-  event.reply("process-subtitles", [
-    { name: "Hi", amount: 246 },
-    { name: "You", amount: 321 },
-  ]);
 });
