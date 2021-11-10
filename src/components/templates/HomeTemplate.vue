@@ -22,12 +22,12 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .home-template {
   height: 100vh;
   margin: 0 1rem;
 }
-::-webkit-scrollbar {
-  display: none;
-}
+// ::-webkit-scrollbar {
+//   display: none;
+// }
 </style>

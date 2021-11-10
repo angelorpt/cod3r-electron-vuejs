@@ -17,11 +17,9 @@ export default {
   },
   methods: {
     proccessSubtitle(files) {
-      console.log("files", files);
       const paths = files.map((file) => file.path);
       ipcRenderer.send("process-subtitles", paths);
       ipcRenderer.on("process-subtitles", (event, arg) => {
-        console.log("pong");
         this.$emit("processed", arg);
       });
     },
