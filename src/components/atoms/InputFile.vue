@@ -6,8 +6,8 @@
     outlined
     multiple
     chips
-    v-model="value"
-    @click:append-outer="$emit('click', value)"
+    v-model="files"
+    @click:append-outer="$emit('click', files)"
   />
 </template>
 
@@ -15,14 +15,15 @@
 export default {
   name: "InputFile",
   props: {
-    value: {
-      type: Array,
-      default: () => [],
-    },
     label: {
       type: String,
       required: true,
     },
+  },
+  data() {
+    return {
+      files: [],
+    };
   },
 };
 </script>
