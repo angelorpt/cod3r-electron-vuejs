@@ -7,7 +7,8 @@ export default (rows) => {
         .map((row) => removeTags(row))
         .reduce(mergeRow)
         .split(" ")
-        .map((word) => word.toLowerCase());
+        .map((word) => word.toLowerCase())
+        .map((word) => word.replace('"', ""));
 
       resolve(words);
     } catch (error) {
