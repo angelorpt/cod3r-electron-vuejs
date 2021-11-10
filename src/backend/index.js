@@ -1,11 +1,13 @@
 import { ipcMain } from "electron";
 import getRowsFromPaths from "./pathsToRows";
+import prepareData from "./prepareData";
 
 ipcMain.on("process-subtitles", async (event, paths) => {
   console.log("paths", paths);
   try {
     const rows = await getRowsFromPaths(paths);
-    console.log("rows", rows);
+    const words = await prepareData(rows);
+    console.log("words", words);
   } catch (error) {
     console.log(error);
   }
